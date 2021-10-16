@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Taski</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>Taski</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <div class="logo">
+    <%= image_tag("logos/logo.png", width: '150px') %>
+  </div>
+  
+  <%= render "shared/nav" %>
+  <%= render "shared/alerts" %>
 
-  <body>
-    <div class="logo">
-      <%= image_tag("logos/logo.png", width: '150px') %>
-    </div>
+  <%= yield %>
 
-    <%= render 'shared/nav' %>
-
-    <%= yield %>
-  </body>
+</body>
 </html>

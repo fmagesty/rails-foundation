@@ -1,9 +1,11 @@
-class Task < ApplicationRecord
+class Task < ActiveRecord::Base
   belongs_to :project
 
   after_save :update_percent_complete if :mark_completed?
 
-  scope :completed, -> {where(completed: true)}
+  scope :completed, -> { where(completed: true) }
+
+  mount_uploader :task_file, TaskFileUploader
 
   def mark_completed?
     self.completed == true

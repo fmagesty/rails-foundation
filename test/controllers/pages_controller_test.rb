@@ -1,18 +1,19 @@
-require "test_helper"
+require 'test_helper'
 
-class PagesControllerTest < ActionDispatch::IntegrationTest
+class PagesControllerTest < ActionController::TestCase
   test "should get contact" do
-    get pages_contact_url
+    get :contact
     assert_response :success
   end
 
   test "should get about" do
-    get pages_about_url
+    get :about
     assert_response :success
   end
 
   test "should get home" do
-    get pages_home_url
+    get :home
     assert_response :success
   end
+
 end

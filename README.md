@@ -1,64 +1,32 @@
-# README
+# Taski
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application was built for the Ruby on Rails Foundations course.
 
-Things you may want to cover:
+### For deploying to Heroku
+* Create a local git repository
 
-* Ruby version
+* Create your initial commit
 
-* System dependencies
+* Create a remote repository on GitHub
 
-* Configuration
+* Push your local code to the remote repository
 
-* Database creation
+* Sign up for a Heroku account
 
-* Database initialization
+* Install the Heroku CLI toolbelt: https://toolbelt.heroku.com/
 
-* How to run the test suite
+* Create the application on Heroku
 
-* Services (job queues, cache servers, search engines, etc.)
+* Integrate Postgres for the production database
 
-* Deployment instructions
+* Integrate config variables on Heroku
 
-* ...
+* Push your master branch from GitHub to your Heroku application
 
-# My rail cheatsheet
-## Explore different rails app creation options:
+* Run rake db:migrate
 
-`rails new --help`
+### Written Tutorial [Learn Rails from Scratch](https://blog.udemy.com/ruby-on-rails-tutorial-learn-from-scratch "Learn Rails from Scratch")
 
-## How to run rails server and view it in the browser:
-
-`rake db:create:all` (1st command)
-`rake db:migrate` (2nd command)
-`rails s` (run rails server)
-it will build WEBrick, which is slow btw and start on the localurl
-you can change the url running `rails server -h` for more startup options
-
-## Scaffolds X Generators:
-
-Keep in mind that Scaffolds create a lot of code and some of that code isn't always needed.
-
-
-`rails g scaffold Project title:string description:text percent_complete:decimal`
-
-then:
-
-`rake db:migrate`
-
-now run the server with `rails s`, open the localhost and type `/projects` at the end of the URL.****
-
-With this our Scaffold gave us full CRUD functionality. We already have a database functionality where we can create/edit/delete objects in it.
-
-## Running Rails on sandbox mode:
-
-Type the command `rails c --sandbox` to enter sandbox mode and ctrl+D to exit
-
-## To open the **console**
-
-Type in `rails c` to start and ctrl+D to exit
-
-## To see the routes withing the application:
-
-Type in `rails routes` and it will show a list of the different used routes. Note that the command `rake routes` was deprecated.
+### Using Sublime Text
+* [Download sublime](http://www.sublimetext.com/ "Download sublime")
+* [Launch Sublime Text 2 from the Mac OS X Terminal](https://gist.github.com/artero/1236170 "Launch Sublime Text 2 from the Mac OS X Terminal")
